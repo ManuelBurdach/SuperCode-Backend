@@ -1,3 +1,4 @@
+// Folie 2
 export const firstOfArray = (array) => {
   return array[0];
 };
@@ -24,4 +25,22 @@ export const uniqueItemsOfArray = (array) => {
 
 export const sumOfArray = (array) => {
   return array.reduce((a, b) => a + b, 0);
+};
+
+//Folie 3
+
+export const randomNumberBetween2Numbers = (para1, para2) => {
+  return Math.round(Math.random() * (para2 - para1)) + para1;
+};
+
+export const firstLetterOfStringUppercase = (string) => {
+  return string[0].toUpperCase() + string.slice(1);
+};
+
+export const stringToUppercase = (string) => {
+  return string.toUpperCase();
+};
+
+export const lastLetterOfStringSamePara2 = (para1, para2) => {
+  return para1.slice(para1.length - 1) === para2 ? true : false;
 };
