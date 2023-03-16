@@ -1,5 +1,4 @@
 //Importiere Filesystem
-import { constants } from "buffer";
 import fs from "fs";
 
 //Erstelle Ordner
