@@ -46,3 +46,5 @@ const removeDirectory = (path, recursive) => {
     else console.log("Ordner wurde gelöscht");
   });
 };
+
+// ------------------------------- DELETE File -------------------------------
