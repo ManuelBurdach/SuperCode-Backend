@@ -1,4 +1,3 @@
-import { constants } from "buffer";
 import fs from "fs";
 
 const openFileAndWrite = (datei, inhalt) => {
@@ -26,7 +25,7 @@ fs.mkdir("./assets", { recursive: true }, (err) => {
   else console.log("Verzeichnis Erstellt");
 });
 
-fs.access("./assets", constants.F_OK, (err) => {
+fs.access("./assets", fs.constants.F_OK, (err) => {
   if (err) console.log("Verzeichnis nicht gefunden:", err);
   else console.log("Verzeichnis gefunden.");
   fs.rmdir("./assets", (err) => {
@@ -39,7 +38,7 @@ fs.writeFile("./delete.txt", "Text in Datei", { flag: "a+" }, (err) => {
   if (err) console.log("Fehler beim erstellen der delete.txt", err);
 });
 
-fs.access("./delete.txt", constants.F_OK, (err) => {
+fs.access("./delete.txt", fs.constants.F_OK, (err) => {
   if (err) console.log("Datei existiert nicht", err);
   else {
     console.log("Datei existiert und wird gelöscht");
