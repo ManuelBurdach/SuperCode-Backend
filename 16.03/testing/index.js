@@ -4,7 +4,11 @@ import fs from "fs";
 //Um nur zu überprüfen ob ein Ordner oder eine Datei existiert gebe nur ein Argument an
 // existDirectoryOrFile("./assets");
 
-//Prüfen ob Ordner oder Datei existiert (Path und Callbackfunction (gibt true oder false zurück))
+//Um zu reagieren wenn Ordner oder Datei nicht existiert gebe ein zweites Argument an (Function: makeFile oder makeDirectory)
+// existDirectoryOrFile("./assets", makeDirectory);
+// existDirectoryOrFile("./assets/datei.txt", makeFile);
+
+//Prüfen ob Ordner oder Datei existiert (Path und Callbackfunction)
 const existDirectoryOrFile = (path, cb = () => {}) => {
   let bla = fs.access(path, fs.constants.F_OK, (err) => {
     if (err) {
@@ -14,10 +18,7 @@ const existDirectoryOrFile = (path, cb = () => {}) => {
   });
 };
 
-// ------------------------------- EXIST + MakeDirectory/File -------------------------------
-//Um zu reagieren wenn Ordner oder Datei nicht existiert gebe ein zweites Argument an (Function: makeFile oder makeDirectory)
-// existDirectoryOrFile("./assets", makeDirectory);
-// existDirectoryOrFile("./assets/datei.txt", makeFile);
+// ------------------------------- MAKE Directory/File -------------------------------
 
 //Erstelle Ordner
 const makeDirectory = (path) => {
