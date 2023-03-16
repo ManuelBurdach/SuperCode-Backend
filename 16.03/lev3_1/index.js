@@ -1,5 +1,4 @@
 //Importiere Filesystem
-import { constants } from "buffer";
 import fs from "fs";
 
 //Erstelle Ordner
@@ -9,7 +8,7 @@ fs.mkdir("./unterordner", (err) => {
 });
 
 let anonymFunc = (parameter) => {
-  fs.access("./unterordner/datei.txt", constants.F_OK, (err) => {
+  fs.access("./unterordner/datei.txt", fs.constants.F_OK, (err) => {
     if (err) {
       console.log("Datei wird erstellt!");
       fs.writeFile("./unterordner/datei.txt", parameter, (err) => {
