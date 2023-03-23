@@ -1,0 +1,51 @@
+/* ----------------------------------------  GENERAL STYLE  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------  HEADER STYLE  */
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: tomato;
+}
+
+header section {
+  display: flex;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: darkslategrey;
+}
+
+/* ----------------------------------------  MAIN STYLE  */
+main {
+  margin-top: 70px;
+}
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: pink;
+}
+
+/* ----------------------------------------  FOOTER STYLE  */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  height: 200px;
+}
